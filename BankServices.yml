@@ -1,51 +1,52 @@
-customer:
-  customer_name: "Raghu"
-  customer_id: &cust_id 6
-  address: "Gokul Street, Dwaraka"
-  email: ["raghu@gmail.com","rag1@yahoo.com","ryep@google.com"]
-  age: 25
-  gender: "Male"
-  contact_info: 
-    - 9876543210
-    - 9362581407
-  date_of_birth: 2000-08-23
+ bank_services: 
+  customer:
+    customer_name: "Raghu"
+    customer_id: &cust_id 6
+    address: "Gokul Street, Dwaraka"
+    email: ["raghu@gmail.com","rag1@yahoo.com","ryep@google.com"]
+    age: 25
+    gender: "Male"
+    contact_info: 
+      - 9876543210
+      - 9362581407
+    date_of_birth: 2000-08-23
 
-  query_raised: |
-    Software Engineer @Google
-    Account holder's transactions were made until 2020, after which not even a single transaction
-      --Customer moved to US
-    And now requires the money deposited
-    Including the fixed deposits made
+    query_raised: |
+      Software Engineer @Google
+      Account holder's transactions were made until 2020, after which not even a single transaction
+        --Customer moved to US
+      And now requires the money deposited
+      Including the fixed deposits made
 
-  query_status: >
-    granted
-    The customer transactions and the processes made earlier were clear
-    hence it would be easy to fulfill the request.
-    Also the remarks on the customer should be clean in any case until the process completes smoothly,
-    any discrepencies raised further can delay the process.
+    query_status: >
+      granted
+      The customer transactions and the processes made earlier were clear
+      hence it would be easy to fulfill the request.
+      Also the remarks on the customer should be clean in any case until the process completes smoothly,
+      any discrepencies raised further can delay the process.
 
-account:
-  account_number: !!int 150
-  balance: 1000000
-  loan_amount: 2500000
-  rate: !!float 1.5
-  fixed_deposit: 100000
-  loan_clear: True
-  uncleared_dues: null
-  remarks: "Excellent"
-  recent_transaction_ids: !!set 
-    ? "A1548E97"
-    ? "A1983E01"
-    ? "A2258E42"
-    ? "A3698E58"
-    
-atm_card:
-  pin_number: &pin 1234
-  card_id: 240
-  account_related: 150
+  account:
+    account_number: !!int 150
+    balance: 1000000
+    loan_amount: 2500000
+    rate: !!float 1.5
+    fixed_deposit: 100000
+    loan_clear: True
+    uncleared_dues: null
+    remarks: "Excellent"
+    recent_transaction_ids: !!set 
+      ? "A1548E97"
+      ? "A1983E01"
+      ? "A2258E42"
+      ? "A3698E58"
 
-transaction:
-  date: 2020-01-20
-  amount: 20000
-  withdrawal: True
-  Deposit: False
+  atm_card:
+    pin_number: &pin 1234
+    card_id: 240
+    account_related: 150
+
+  transaction:
+    date: 2020-01-20
+    amount: 20000
+    withdrawal: True
+    Deposit: False
